@@ -7,54 +7,47 @@
 
 body, html {
     height: 100%;
-    background-color: black;
+    background-color: #070707
 }
 
 .navbar{
-    background-color: rgba(255,255,255,0.0);
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
     width: 100%;
-    margin-bottom: -50px;
-    margin-top: -40px;
+    height: 6rem;
     position: fixed;
     top: 0;
     z-index: 1030;
-}
+    background-color: #070707
+
+    
+
+}   
 .navbar img{
     height: 200px;
-    display: flex;
     cursor: pointer;
-
-
 }
 
-.navbar li{
-
+a{
+   color: #ff0022;
+   text-decoration: none;
+   font-family: 'Prompt', sans-serif;
 }
 
-ul a{
-
-    text-decoration: none;
-    color: red;
+.navbar ul li{
+    padding:  0 15px;
+    list-style: none;
+    justify-content: space-between;
 }
 
-.fa-user{
-    color: red;
-}
-.fa-user:hover{
-    color: white;
-    transition: ease-in 0.1s;
+.navbar ul li a:hover{
+    border-bottom: solid 2px white;
 }
 
-
-
-header{
-
-
-
+.navbar ul{
+    display: flex;
 }
+
 
 .logo-image{
     display: flex;
@@ -62,6 +55,8 @@ header{
     width: 100px;
     overflow: hidden;
     margin-left: -200px;
+    background-repeat: no-repeat;
+    position: relative;
 }
 
 .hero-image {
@@ -69,14 +64,23 @@ header{
     height: 50%;
     background-position: center;
     background-repeat: no-repeat;
-
     position: relative;
     z-index: 1;
-
+    margin-top: 7rem;
+    
 
 }
 
-.product-card {
+.osio1{
+    color: black;
+    padding-top: 60px;
+    padding-left: 30px;
+    background-color: white;
+    font-family: 'Prompt', sans-serif;
+    
+}
+
+.product-card { 
     position: relative;
     padding: 1rem;
     width: 350px;
@@ -84,22 +88,19 @@ header{
     border-radius: 0.3rem;
     cursor: pointer;
     margin-top: 2rem;
-    background-color: wheat;
+    box-shadow: 5px 5px 8px #888888;
+
 
 }
 
-
-.product-img {
-    display: flex;
-    height: 300px;
-    width: 300px;
-    justify-content: center;
-    margin-top: -4rem;
-
+.product-info{
+    margin-top: 2rem;
 }
+
+
 
 .buybtn {
-    background-color: red;
+    background-color: #070707;
     padding: 0.6rem 3.5rem;
     font-weight: 600;
     font-size: 1rem;
@@ -107,7 +108,7 @@ header{
     color: white;
     text-align: center;
     border-radius: 0.2rem;
-    font-family: Poppins, sans-serif;
+    font-family: 'Prompt', sans-serif;
     cursor: pointer;
     border: none;
     outline: none;
@@ -117,7 +118,8 @@ header{
 }
 
 .buybtn:hover{
-    background-color: rebeccapurple;
+    background-color: #ff0022;
+    color: white;
     transition: ease-in 0.1s;
 
 }
@@ -132,34 +134,69 @@ header{
 
 .product-card h2 {
     text-align: center;
-    font-family: Poppins, sans-serif;
+    font-family: 'Prompt', sans-serif;
     font-size: larger;
     color: black;
-    margin-top: -20px;
+    
 }
+
+
 
 .product-card p {
     text-align: center;
+    font-family: 'Prompt', sans-serif;
+    
 }
 .price {
     text-align: center;
-    color: orange;
-    font-family: Poppins, sans-serif;
+    color:#ff0022;
+    font-family: 'Prompt', sans-serif;
     font-size: x-large;
 
 
 }
 
 .tuotteet{
-    margin-top: 5rem;
+    
     background-color: white;
     display: flex;
     justify-content: space-evenly;
     flex-direction: row;
     flex-wrap: wrap;
+    padding: 3rem;
+   
+}
 
+
+.img-size{
+    width: -webkit-fill-available;
+    height: 227px;
+    object-fit: cover;
 }
 
 
 
+.osio2{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    padding: 3rem;
 
+}
+
+.footer{
+    color:#ff0022;
+    background-color:#070707;
+    font-family: 'Prompt', sans-serif;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.footer p{
+    padding: 3px;
+    margin-top: 10px;
+}
