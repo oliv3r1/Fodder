@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  font-family: 'Prompt', sans-serif;
 }
 body {
   background: url(img/background1.jpg) no-repeat center center fixed;
@@ -33,7 +34,7 @@ nav img {
 
 
 
-input[type=text], input[type=password] {
+input[type=text], input[type=password], input[type=email] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -98,6 +99,19 @@ span.psw {
   background-color: rgb(0, 0, 0); 
   background-color: rgba(0,0,0,0.4); 
   padding-top: 20vh;
+}
+.modal1 {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0, 0, 0); 
+  background-color: rgba(0,0,0,0.4); 
+  padding-top: 10vh;
 }
 
 .modal-content {
@@ -216,3 +230,5 @@ span.psw {
   top: 0;
   border-radius: 10px;
 }
+
+
