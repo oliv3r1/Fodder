@@ -8,6 +8,7 @@ body{
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    font-family: 'Prompt', sans-serif;
 }
 main{
     display: flex;
@@ -36,6 +37,7 @@ nav {
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 5rem;
+    width: 100%;
   }
   
   .container {
@@ -70,6 +72,17 @@ nav {
   .name {
     font-weight: bold;
     font-size: 1.5rem;
+  }
+
+  .Listed-Items{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .Listed-Items h1{
+    color: #ff0022;
+    text-shadow: 0 0 3px #ffffff, 0 0 5px #ffffff;
+    text-align: center;
   }
   
   
