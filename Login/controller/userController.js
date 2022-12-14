@@ -49,16 +49,10 @@ const user_post = async (req, res) => {
   ];
   //
 
-  const result = await addUser(data,next);
+  const result = await addUser(data);
   if (result.affectedRows > 0) {
-    res.json({
-      
-       message: 'user added',
-       user_id: result.insertId,
-      
-    })
-   }else {
-    res.send('virhe');
+  
+    res.redirect('/');
   }
 }
 
