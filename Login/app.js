@@ -26,11 +26,11 @@ app.use(sessions({
 }));
 app.use(cookieParser());
 app.use(express.static('uploads'));
-app.use(express.static('public'));
+app.use(express.static('public/Etusivu'));
 
 // Session middleware
-app.use('/user', userRoute);
 app.use('/sneakers', sneakersRoute);
+app.use('/user', userRoute);
 
 app.use((req, res, next) => {
   const err = httpError('Not found', 404);

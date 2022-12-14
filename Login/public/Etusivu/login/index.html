@@ -7,8 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="login.css" />
     <script defer src="login.js"></script>
-    <script src="serialize.js"></script>
-    <script src="./js/add-user.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400&display=swap" rel="stylesheet">
     <title>Login</title>
   </head>
@@ -18,13 +16,14 @@
         <nav>
           <ul>
             <li>
-              <a href="/Documents/projekti/Etusivu/Front.html"
-                ><img src="img/Fodderlogo.png" alt="Banner" />
+              <a href="/"
+                ><img src="../img/Fodderlogo.png" alt="Banner" />
               </a>
             </li>
           </ul>
         </nav>
       </header>
+      
       
 <div class="btnLogin">
       <button class="LogAndReg" onclick="document.getElementById('Btn').style.display='block'" style="width:auto;"><p> Login </p></button>
@@ -98,13 +97,13 @@
 </form>
 </div>
 </div>
-<div id="fPage">
+<footer id="fPage">
 
-				<div id="login-data" style="color: white;"><div>
-<a id="frontpagetext"href="/Documents/projekti/Etusivu/Front.html"><p> Back to Frontpage</p></a>
-</div>
-
- 
+  <div id="login-data" style="color: white;">
+    <p id="login-data" style="display: none">user.User</p>
+    <div>
+   
+</footer>
 
     </main>
   </body>

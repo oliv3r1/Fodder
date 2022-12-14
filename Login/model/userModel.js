@@ -37,6 +37,7 @@ const getInfo = async (username) => {
 }
 
 const addUser = async (data) => {
+  if(Object.values(data).some(e => e === undefined)) return next(httpError('nope', 500));
   try {
     console.log(data, "data in addUser");
     const [rows] = await promisePool.execute(`INSERT INTO user (User, Email, Etunimi, Sukunimi, Password) VALUES (?, ?, ?, ?, ?);`, data);

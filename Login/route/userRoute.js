@@ -21,8 +21,8 @@ router.get('/me', [sessionChecker], user_info);
 router.post('/login', user_login);
 router.get('/logout', [sessionChecker], user_logout);
 
-router.post('/', user_post);
-router.get('/', [sessionChecker], user_list_get);
+router.post('', [sessionChecker], user_post);
+router.get('', [sessionChecker], user_list_get);
 router.get('/:id', [sessionChecker], user_get);
 
 // router.put('/', (req, res) => {

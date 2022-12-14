@@ -1,30 +1,21 @@
 const express = require('express');
-const {user_list_get, user_get, user_post} = require('../controller/userController');
+const { get_all_sneakers, add_shoe } = require("../controller/sneakerController");
 const sneakers = express.Router();
 const pool = require('../database/db');
 const promisePool = pool.promise();
 const { object, string, number, date, InferType } = require('yup');
 
-sneakers.get('/', async (req, res) => {
-	const [data] = promisePool.execute("SELECT * FROM shoes");
-});
+sneakers.get('/', get_all_sneakers);
 
 let sneakerSchema = object({
-  malli: number().required(),
+  // malli: number().required(),
+  merkki: number().required(),
   hinta: number().required(),
   koko: number().required(),
 	userId: number().required(),
-	kuva: string().required(),
 });
 
-sneakers.post('/', async (req, res) => {
-	const body = req.body;
-	if(!sneakerSchema.isValidSync(body)) {
-		return res.status(400).json({ message: "Vituiks man"})
-	}
-	let [created] = await promisePool.execute(`INSERT INTO shoes (shoes_id, malli, hinta, koko, user, kuva) VALUES (NULL, '${body.malli}', '${body.hinta}', '${body.koko}', '${body.userId}', '');`)
-	return res.status(201).json({ message: "Created" })
-});
+sneakers.post('/', add_shoe);
 
 // sneakers.put('/', (req, res) => {
 //   res.send('From this endpoint you can edit users.');

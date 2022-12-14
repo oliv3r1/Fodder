@@ -3,6 +3,7 @@
 var modal = document.getElementById('Btn');
 const info = document.getElementById('login-data');
 
+
 document.onload = async () => {
   // const sneakers = await getAllSneakers();
   const getUserInfo = await getUser("jarmo");
@@ -39,16 +40,18 @@ const userInfo = async () => {
   const response = await fetch(url + '/user/me');
   const user = await response.json();
   console.log(user);
-  info.innerText = user.User;
+  info.innerText =  user.User;
 };
 
 const logout = async () => {
   const response = await fetch(url + '/user/logout');
   const user = await response.text();
   location.reload();
+  alert("You have successfully logged out!");
+
 };
 
-const getAllSneakers = async (id) => {
+const getAllSneakers = async (id) => {s
   const response = await fetch(url + '/sneaker');
   const sneakers = await response.json();
   return sneakers;
