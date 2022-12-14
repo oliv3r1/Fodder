@@ -5,11 +5,13 @@
     <title>Title</title>
     <link rel="stylesheet" href="frontstyle.css">
     <script src="https://kit.fontawesome.com/709063382e.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="addToCart.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
+    
 <header>
         <nav class="navbar">
             <img src="kuvat/Fodderlogo.png">
@@ -28,9 +30,15 @@
     </div>
 </div>
 
+
+
+
 <div class="osio1">
     <h1>NEW RELEASES</h1>
+
 </div>
+
+
 
 
 <main class="tuotteet">
@@ -47,7 +55,7 @@
 
 </section>
 
-<section class="product-card">
+<section class="product-card" id="item1">
     <div class="product-img">
         <img src="kuvat/shoe2.jpeg" class="img-size" alt="kuva">
     </div>
@@ -55,11 +63,11 @@
         <h2>AIR JORDAN 6 RETRO</h2>
         <p>'CHROME'</p>
         <div class="price">170€</div>
-    </div>
+
 
 </section>
 
-<section class="product-card">
+<section class="product-card" id="item2">
     <div class="product-img">
         <img src="kuvat/shoe3.jpeg" class="img-size" alt="kuva">
     </div>
@@ -67,15 +75,30 @@
         <h2>A MA MANIÉRE X AIR JORDAN 4 RETRO</h2>
         <p>'VIOLET ORE'</p>
         <div class="price">170€</div>
+        <div>
+            <label>Size: </label>
+            <select>
+                <option>40</option>
+                <option>41</option>
+                <option>43</option>
+            </select>
+        </div>
         
     </div>
 
     </div>
+    
 </section>
 </main>
 
 <div class="osio2">
     <div class="buybtn">More releases</div>
+</div>
+
+
+<div class="osio1">
+    <h1>HOTTEST SHOES</h1>
+
 </div>
 
 <main class="tuotteet">
@@ -152,9 +175,9 @@
             <div class="price">170€</div>
             
         </div>
-    
         </div>
     </section>
+
     </main>
 
 

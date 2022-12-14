@@ -7,7 +7,7 @@
 
 body, html {
     height: 100%;
-    background-color: #070707
+    
 }
 
 .navbar{
@@ -70,7 +70,9 @@ a{
     background-repeat: no-repeat;
     position: relative;
     z-index: 1;
-    margin-top: 7rem;
+    margin-top: 6rem;
+    background-color: black;
+    
     
 
 }
@@ -88,7 +90,7 @@ a{
     position: relative;
     padding: 1rem;
     width: 350px;
-    height: 400px;
+    height: auto;
     border-radius: 0.3rem;
     cursor: pointer;
     margin-top: 2rem;
@@ -201,6 +203,8 @@ a{
 }
 
 .footer p{
-    padding: 3px;
-    margin-top: 10px;
+    
+    padding: 7px;
+    margin-top: 12x;
 }
+
