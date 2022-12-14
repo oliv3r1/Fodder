@@ -24,9 +24,21 @@ const getUser = async (userId, next) => {
   }
 };
 
+const checkUserCredentials = async (username, password) => {
+  const [validUser] = await promisePool.execute(`SELECT User, Password from user where User = ? AND Password = ? LIMIT 1;`, [username, password]);
+  console.log(validUser);
+  if(validUser.length > 0) return true;
+  return false;
+}
+
+const getInfo = async (username) => {
+  const [user] = await promisePool.execute(`SELECT * from user where User = ? LIMIT 1;`, [username])
+  return user[0];
+}
 
 const addUser = async (data, next) => {
   try {
+    console.log(data, "data in addUser");
     const [rows] = await promisePool.execute(`INSERT INTO user (User, Email, Etunimi, Sukunimi, Password) VALUES (?, ?, ?, ?, ?);`, data);
     return rows;
   } catch (e) {
@@ -40,4 +52,6 @@ module.exports = {
   getAllUsers,
   getUser,
   addUser,
+  checkUserCredentials,
+  getInfo
 };

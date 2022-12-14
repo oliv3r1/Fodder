@@ -1,21 +1,34 @@
 'use strict';
+require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const userRoute = require('./route/userRoute');
 const sneakersRoute = require('./route/sneakersRoute');
 const {httpError} = require('./utils/errors');
+const sessions = require('express-session');
+const cookieParser = require("cookie-parser");
+const MemoryStore = new sessions.MemoryStore();
 const app = express();
 const port = 3000;
 
+
+const oneDay = 1000 * 60 * 60 * 24;
 app.use(cors());
 app.use(express.json()); // for parsing application/json
 app.use(express.urlencoded({extended: true})); // for parsing application/x-www-form-urlencoded
+app.use(sessions({
+    store: MemoryStore,
+    secret: process.env.COOKIE_SECRET,
+    saveUninitialized: true,
+    name: "fodder-cookie",
+    cookie: { maxAge: oneDay },
+    resave: false 
+}));
+app.use(cookieParser());
 app.use(express.static('uploads'));
 app.use(express.static('public'));
 
-app.get('/',  (req, res) => {
-  res.render('login.html', )
-})
+// Session middleware
 app.use('/user', userRoute);
 app.use('/sneakers', sneakersRoute);
 

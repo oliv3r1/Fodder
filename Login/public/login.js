@@ -1,10 +1,11 @@
 'use strict';
 
 var modal = document.getElementById('Btn');
+const info = document.getElementById('login-data');
 
 document.onload = async () => {
-  const sneakers = await getAllSneakers();
-  const getUser = await getUser("jarmo");
+  // const sneakers = await getAllSneakers();
+  const getUserInfo = await getUser("jarmo");
 }
 
 // When the user clicks anywhere outside of the modal, close it
@@ -23,11 +24,10 @@ window.onclick = function(event) {
   }
 }
 
-
 const url = 'http://localhost:3000'; // change url when uploading to server
 
-// select existing html elements
-const loginForm = document.querySelector('#login-form');
+
+
 
 const getUser = async (id) => {
   const response = await fetch(url + '/user/' + id);
@@ -35,13 +35,27 @@ const getUser = async (id) => {
   return user;
 };
 
+const userInfo = async () => {
+  const response = await fetch(url + '/user/me');
+  const user = await response.json();
+  console.log(user);
+  info.innerText = user.User;
+};
+
+const logout = async () => {
+  const response = await fetch(url + '/user/logout');
+  const user = await response.text();
+  location.reload();
+};
+
 const getAllSneakers = async (id) => {
   const response = await fetch(url + '/sneaker');
   const sneakers = await response.json();
-  console.log(sneakers);
   return sneakers;
 };
 
+console.log(info);
+userInfo();
 
 
 
