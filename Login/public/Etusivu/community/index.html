@@ -1,126 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Title</title>
-    <link rel="stylesheet" href="frontstyle.css">
-    <script src="https://kit.fontawesome.com/709063382e.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="frontstyle.css" />
+    <script
+      src="https://kit.fontawesome.com/709063382e.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
     <script defer src="load-sneakers.js"></script>
-</head>
-<body>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <a href="/">
+          <img src="../kuvat/Fodderlogo.png" />
+        </a>
 
-<header>
-        <nav class="navbar">
-					<a href="/">
-            <img src="../kuvat/Fodderlogo.png">
-					</a>
+        <ul class="main-menu">
+          <li><a href="/community">Community</a></li>
+          <li><a href="/login">Login</a></li>
+        </ul>
+      </nav>
+    </header>
 
-            <ul class="main-menu">
-                <li><a href="/community">Community</a></li>
-                <li><a href="/login">Login</a></li>
-            </ul>
-        </nav>
-
-</header>
-
-
-<div class="hero-image">
-    <div class="hero-text">
+    <div class="hero-image">
+      <div class="hero-text"></div>
     </div>
-</div>
 
-<div class="osio1">
-    <h1>COMMUNITY</h1>
-
-</div>
-
-<div class="addShoe">
-    <button class="buyBtn" onclick="document.getElementById('Btn1').style.display='block'" style="width:auto;" ><p>Add Shoe</p></button>
-</div>
-<div id="Btn1" class="modal1">
-
-    <form
-              
-              action="http://localhost:3000/sneakers"
-              method="post"
-              class="modal-content animate"
-              id="createSneakerForm"
-            >
-
-
-  <div class="container">
-
-
-    <div>
-        <label for="merkki"><b>Merkki</b></label>
-        <select id="selectMenu1" >
-            <option>Nike</option>
-            <option>Adidas</option>
-            <option>New Balance</option>
-        </select>
-        <input id="inputField1" type="text" placeholder="Merkki" name="merkki" required>
+    <div class="osio1">
+      <h1>COMMUNITY</h1>
     </div>
-    
-   
-    <div>
-        <label for="malli"><b>Malli</b></label>
-        <select id="selectMenu2">
-            <option>Air Jordan</option>
-            <option>Air force</option>
-            <option>Dunk</option>
-            <option>Yeezy</option>
-            <option>Superstar</option>
-            <option>NMD</option>
-            <option>990</option>
-            <option>327</option>
-            <option>992</option>
-         </select>
-    <input id="inputField2" type="text" placeholder="Malli" name="malli" required>
-</div>
 
-  <label for="hinta"><b>Hinta</b></label>
-  <input type="text" placeholder="Hinta" name="hinta" required>
+    <div class="addShoe">
+      <button
+        class="buyBtn"
+        onclick="document.getElementById('Btn1').style.display='block'"
+        style="width: auto"
+      >
+        <p>Add Shoe</p>
+      </button>
+    </div>
+    <div id="Btn1" class="modal1">
+      <form
+        action="http://localhost:3000/sneakers"
+        method="post"
+        class="modal-content animate"
+        id="createSneakerForm"
+      >
+        <div class="container">
+          <div>
+            <label for="merkki"><b>Merkki</b></label>
+            <select id="selectMenu1">
+              <option>Nike</option>
+              <option>Adidas</option>
+              <option>New Balance</option>
+            </select>
+            <input
+              id="inputField1"
+              type="text"
+              placeholder="Merkki"
+              name="merkki"
+              required
+            />
+          </div>
 
-  <label for="koko"><b>Koko</b></label>
-  <input type="text" placeholder="Koko" name="koko" required>
-  <label for="user"><b>Käyttäjä (email)</b></label>
-  <input type="email" placeholder="Käyttäjä (email)" name="user" required>
-  
+          <div>
+            <label for="malli"><b>Malli</b></label>
+            <select id="selectMenu2">
+              <option>Air Jordan</option>
+              <option>Air force</option>
+              <option>Dunk</option>
+              <option>Yeezy</option>
+              <option>Superstar</option>
+              <option>NMD</option>
+              <option>990</option>
+              <option>327</option>
+              <option>992</option>
+            </select>
+            <input
+              id="inputField2"
+              type="text"
+              placeholder="Malli"
+              name="malli"
+              required
+            />
+          </div>
 
-  <!-- <label for="kuva"><b>Kuva</b></label>
+          <label for="hinta"><b>Hinta</b></label>
+          <input type="text" placeholder="Hinta" name="hinta" required />
+
+          <label for="koko"><b>Koko</b></label>
+          <input type="text" placeholder="Koko" name="koko" required />
+          <label for="user"><b>Käyttäjä (email)</b></label>
+          <input
+            type="email"
+            placeholder="Käyttäjä (email)"
+            name="user"
+            required
+          />
+
+          <!-- <label for="kuva"><b>Kuva</b></label>
 <input type="text" name="kuva" accept="image/*" required> -->
 
-  <button type="submit">Add Shoe</button>
-
-</div>
-<div class="container" style="background-color:#f1f1f1">
-    <button type="button" onclick="document.getElementById('Btn1').style.display='none'" class="cancelbtn">Cancel</button>
-
-  </div>
-  </form>
-
-
-
-</div>
-
-
-<main class="tuotteet" id="tuotteet">
-
-<section class="product-card">
-    <div class="product-img">
-        <img src="../kuvat/shoe1.jpeg" class="img-size" alt="kuva">
+          <button type="submit">Add Shoe</button>
+        </div>
+        <div class="container" style="background-color: #f1f1f1">
+          <button
+            type="button"
+            onclick="document.getElementById('Btn1').style.display='none'"
+            class="cancelbtn"
+          >
+            Cancel
+          </button>
+        </div>
+      </form>
     </div>
-    <div class="product-info">
-        <h2>DJ KHALED X AIR JORDAN 5 RETRO</h2>
-        <p>'WE THE BEST - CRIMSON BLISS'</p>
-        <div class="price">250€</div>
-    </div>
-</section>
 
-<!-- <section class="product-card" id="item1">
+    <main class="tuotteet" id="tuotteet">
+      <section class="product-card">
+        <div class="product-img">
+          <img src="../kuvat/shoe1.jpeg" class="img-size" alt="kuva" />
+        </div>
+        <div class="product-info">
+          <h2>DJ KHALED X AIR JORDAN 5 RETRO</h2>
+          <p>'WE THE BEST - CRIMSON BLISS'</p>
+          <div class="price">250€</div>
+        </div>
+      </section>
+
+      <!-- <section class="product-card" id="item1">
     <div class="product-img">
         <img src="../kuvat/shoe2.jpeg" class="img-size" alt="kuva">
     </div>
@@ -154,20 +169,15 @@
     </div>
 
 </section> -->
-</main>
-
-
-
-</body>
-<footer class="footer">
+    </main>
+  </body>
+  <footer class="footer">
     <h2>Contact us:</h2>
     <li><p>FODDER@mail.com</p></li>
     <li><p>Tel: +358 40244252</p></li>
     <li><p></p></li>
+  </footer>
 
-</footer>
-
-
-<script src="Etusivu.js"></script>
-<script src="/Documents/projekti/Etusivu/app.js"></script>
+  <script src="Etusivu.js"></script>
+  <script src="/Documents/projekti/Etusivu/app.js"></script>
 </html>
