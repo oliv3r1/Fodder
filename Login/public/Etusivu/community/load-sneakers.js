@@ -11,6 +11,7 @@ window.onclick = function (event) {
   }
 };
 
+
 var inputField1 = document.getElementById("inputField1");
 
 var selectMenu1 = document.getElementById("selectMenu1");

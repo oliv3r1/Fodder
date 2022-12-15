@@ -51,11 +51,6 @@ const logout = async () => {
 
 };
 
-// const getAllSneakers = async (id) => {s
-//   const response = await fetch(url + '/sneaker');
-//   const sneakers = await response.json();
-//   return sneakers;
-// };
 
 console.log(info);
 userInfo();

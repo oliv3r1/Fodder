@@ -56,10 +56,10 @@ const createShoe = async (shoeData) => {
   const kayttaja = await getUserByEmail(shoeData.user);
   if (!kayttaja) throw new Error("käyttäjä puuttuu");
   const malliNimi = malli.nimi.toLowerCase().replaceAll(" ", "-") + ".jpeg";
-  const kuva = "iteotettukuva.jpeg"; //TODO kuvan lisäys
+  const kuva = "shoe1.jpeg"; //TODO kuvan lisäys
   const [shoe] = await promisePool.execute(
     "INSERT INTO `shoes` (`shoes_id`, `malli`, `hinta`, `koko`, `user`, `kuva`) VALUES (NULL, ?, ?, ?, ?, ?);",
-    [malli.malli_id, shoeData.hinta, shoeData.koko, kayttaja.ID, kuva]
+    [malli.malli_id, shoeData.hinta, shoeData.koko, kayttaja.ID, malliNimi]
   );
   return shoe;
 };
