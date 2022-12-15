@@ -7,14 +7,6 @@ const { object, string, number, date, InferType } = require('yup');
 
 sneakers.get('/', get_all_sneakers);
 
-let sneakerSchema = object({
-  // malli: number().required(),
-  merkki: number().required(),
-  hinta: number().required(),
-  koko: number().required(),
-	userId: number().required(),
-});
-
 sneakers.post('/', add_shoe);
 
 // sneakers.put('/', (req, res) => {

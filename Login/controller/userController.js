@@ -61,5 +61,5 @@ module.exports = {
   user_post,
   user_login,
   user_logout,
-  user_info
+  user_info,
 };

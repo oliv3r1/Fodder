@@ -7,8 +7,8 @@ let createSneakerSchema = object({
   malli: string().required(),
   hinta: number().required(),
   koko: number().required(),
-	// userId: string().required(),
-	// kuva: string().required(),
+	user: string().required(),
+	 //kuva: string().required(),
 });
 
 const get_all_sneakers = async (req, res) => {
@@ -20,6 +20,7 @@ const add_shoe = async (req, res) => {
   let sneakers;
   try {
     const body = await createSneakerSchema.validate(req.body);
+    console.log(body)
     sneakers = await createShoe(body);
   } catch (e) {
     return res.status(400).json({ error: e.message });

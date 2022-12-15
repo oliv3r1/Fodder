@@ -11,7 +11,7 @@
     <script defer src="load-sneakers.js"></script>
 </head>
 <body>
-    
+
 <header>
         <nav class="navbar">
 					<a href="/">
@@ -43,37 +43,62 @@
 <div id="Btn1" class="modal1">
 
     <form
-              novalidate
+              
               action="http://localhost:3000/sneakers"
               method="post"
               class="modal-content animate"
               id="createSneakerForm"
             >
-  
-  
+
+
   <div class="container">
+
+
+    <div>
+        <label for="merkki"><b>Merkki</b></label>
+        <select id="selectMenu1" >
+            <option>Nike</option>
+            <option>Adidas</option>
+            <option>New Balance</option>
+        </select>
+        <input id="inputField1" type="text" placeholder="Merkki" name="merkki" required>
+    </div>
     
-    <label for="merkki"><b>Merkki</b></label>
-    <input type="text" placeholder="Merkki" name="merkki" required>
-    
-  <label for="malli"><b>Malli</b></label>
-  <input type="text" placeholder="Malli" name="malli" required>
+   
+    <div>
+        <label for="malli"><b>Malli</b></label>
+        <select id="selectMenu2">
+            <option>Air Jordan</option>
+            <option>Air force</option>
+            <option>Dunk</option>
+            <option>Yeezy</option>
+            <option>Superstar</option>
+            <option>NMD</option>
+            <option>990</option>
+            <option>327</option>
+            <option>992</option>
+         </select>
+    <input id="inputField2" type="text" placeholder="Malli" name="malli" required>
+</div>
 
   <label for="hinta"><b>Hinta</b></label>
   <input type="text" placeholder="Hinta" name="hinta" required>
 
   <label for="koko"><b>Koko</b></label>
   <input type="text" placeholder="Koko" name="koko" required>
+  <label for="user"><b>Käyttäjä (email)</b></label>
+  <input type="email" placeholder="Käyttäjä (email)" name="user" required>
+  
 
   <!-- <label for="kuva"><b>Kuva</b></label>
-  <input type="text" placeholder="KUva" name="kuva" required> -->
-    
+<input type="text" name="kuva" accept="image/*" required> -->
+
   <button type="submit">Add Shoe</button>
-  
+
 </div>
 <div class="container" style="background-color:#f1f1f1">
     <button type="button" onclick="document.getElementById('Btn1').style.display='none'" class="cancelbtn">Cancel</button>
-    
+
   </div>
   </form>
 
@@ -83,7 +108,7 @@
 
 
 <main class="tuotteet" id="tuotteet">
-    
+
 <section class="product-card">
     <div class="product-img">
         <img src="../kuvat/shoe1.jpeg" class="img-size" alt="kuva">
@@ -123,11 +148,11 @@
                 <option>43</option>
             </select>
         </div>
-        
+
     </div>
 
     </div>
-    
+
 </section> -->
 </main>
 
@@ -143,6 +168,6 @@
 </footer>
 
 
-<script src="Etusivu.js"></script>  
+<script src="Etusivu.js"></script>
 <script src="/Documents/projekti/Etusivu/app.js"></script>
 </html>

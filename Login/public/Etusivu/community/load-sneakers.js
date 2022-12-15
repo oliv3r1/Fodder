@@ -5,13 +5,31 @@ const getAllSneakers = async (id) => {
 };
 
 var modal = document.getElementById('Btn');
-
-// When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
 }
+
+
+var inputField1 = document.getElementById("inputField1");
+
+var selectMenu1 = document.getElementById("selectMenu1");
+
+selectMenu1.onchange = function() {
+  
+  inputField1.value = selectMenu1.value;
+}
+
+var inputField2 = document.getElementById("inputField2");
+
+var selectMenu2 = document.getElementById("selectMenu2");
+
+selectMenu2.onchange = function() {
+
+     inputField2.value = selectMenu2.value;
+}
+
 
 
 const createSneakerHtml = (sneakerData) => {
@@ -22,18 +40,17 @@ return `
       </div>
       <div class="product-info">
           <h2>${sneakerData.nimi}</h2>
-          <p>${sneakerData.malli}</p>
-          <div class="price">${sneakerData.hinta}€</div>
+          <p>Koko: ${sneakerData.koko}</p>
+          <p>${sneakerData.Email}<p>
+          <div class="price">${sneakerData.hinta} €</div>
       </div>
   </section>`
 }
 
 const init = async () => {
   const sneakers = await getAllSneakers();
-  console.log(sneakers);
   const tuotteet = document.getElementById("tuotteet");
-  console.log("Running");
-
+  console.log(sneakers)
   for(const shoe of sneakers) {
     const html = createSneakerHtml(shoe);
     const node = document.createElement("div");

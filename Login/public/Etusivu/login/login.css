@@ -12,11 +12,21 @@ body {
   background-size: auto; 
 }
 
+@media screen and (max-width: 800px) {
+  body {
+    background: url(../img/neonshoe.jpeg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size:800px 100%; 
+    
+  }
+}
+
 
 header {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid #ff0022;
   align-items: center;
 }
 
@@ -25,6 +35,7 @@ nav {
   flex-direction: column;
   width: 100vw;
   height: 5rem;
+ 
 }
 
 nav img {
