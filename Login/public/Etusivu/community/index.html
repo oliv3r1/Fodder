@@ -32,15 +32,54 @@
     </div>
 </div>
 
-
-
-
 <div class="osio1">
     <h1>COMMUNITY</h1>
 
 </div>
 
+<div class="addShoe">
+    <button class="buyBtn" onclick="document.getElementById('Btn1').style.display='block'" style="width:auto;" ><p>Add Shoe</p></button>
+</div>
+<div id="Btn1" class="modal1">
 
+    <form
+              novalidate
+              action="http://localhost:3000/sneakers"
+              method="post"
+              class="modal-content animate"
+              id="createSneakerForm"
+            >
+  
+  
+  <div class="container">
+    
+    <label for="merkki"><b>Merkki</b></label>
+    <input type="text" placeholder="Merkki" name="merkki" required>
+    
+  <label for="malli"><b>Malli</b></label>
+  <input type="text" placeholder="Malli" name="malli" required>
+
+  <label for="hinta"><b>Hinta</b></label>
+  <input type="text" placeholder="Hinta" name="hinta" required>
+
+  <label for="koko"><b>Koko</b></label>
+  <input type="text" placeholder="Koko" name="koko" required>
+
+  <!-- <label for="kuva"><b>Kuva</b></label>
+  <input type="text" placeholder="KUva" name="kuva" required> -->
+    
+  <button type="submit">Add Shoe</button>
+  
+</div>
+<div class="container" style="background-color:#f1f1f1">
+    <button type="button" onclick="document.getElementById('Btn1').style.display='none'" class="cancelbtn">Cancel</button>
+    
+  </div>
+  </form>
+
+
+
+</div>
 
 
 <main class="tuotteet" id="tuotteet">
@@ -91,51 +130,6 @@
     
 </section> -->
 </main>
-
-<div class="osio2">
-    <button class="buyBtn" onclick="document.getElementById('Btn1').style.display='block'" style="width:auto;" ><p>Sell Shoe</p></button>
-</div>
-<div id="Btn1" class="modal1">
-
-    <form
-              novalidate
-              action="http://localhost:3000/sneakers"
-              method="post"
-              class="modal-content animate"
-              id="createSneakerForm"
-            >
-  
-  
-  <div class="container">
-    
-    <label for="merkki"><b>Merkki</b></label>
-    <input type="text" placeholder="Merkki" name="merkki" required>
-    
-  <label for="malli"><b>Malli</b></label>
-  <input type="text" placeholder="Malli" name="malli" required>
-
-  <label for="hinta"><b>Hinta</b></label>
-  <input type="text" placeholder="Hinta" name="hinta" required>
-
-  <label for="koko"><b>Koko</b></label>
-  <input type="text" placeholder="Koko" name="koko" required>
-
-  <!-- <label for="kuva"><b>Kuva</b></label>
-  <input type="text" placeholder="KUva" name="kuva" required> -->
-    
-  <button type="submit">Add Shoe</button>
-  
-</div>
-<div class="container" style="background-color:#f1f1f1">
-    <button type="button" onclick="document.getElementById('Btn1').style.display='none'" class="cancelbtn">Cancel</button>
-    
-  </div>
-  </form>
-
-
-
-</div>
-
 
 
 
