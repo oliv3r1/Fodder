@@ -26,7 +26,7 @@ const add_shoe = async (req, res) => {
   } catch (e) {
     return res.status(400).json({ error: e.message });
   }
-  return res.redirect("../community/index.html");
+  return res.redirect("../community");
 };
 
 module.exports = {
