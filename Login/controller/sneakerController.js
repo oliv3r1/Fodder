@@ -21,11 +21,12 @@ const add_shoe = async (req, res) => {
   try {
     const body = await createSneakerSchema.validate(req.body);
     console.log(body);
+    // body.user = req.user.ID;
     sneakers = await createShoe(body);
   } catch (e) {
     return res.status(400).json({ error: e.message });
   }
-  return res.redirect("/community");
+  return res.redirect("../community/index.html");
 };
 
 module.exports = {
