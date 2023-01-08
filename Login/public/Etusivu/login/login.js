@@ -24,23 +24,23 @@ window.onclick = function (event) {
   }
 };
 
-const url = "../index.html"; // change url when uploading to server
+const url = "10.114.34.67/app/"; // change url when uploading to server
 
 const getUser = async (id) => {
-  const response = await fetch(url + "../user/" + id);
+  const response = await fetch(url + "/user/" + id);
   const user = await response.json();
   return user;
 };
 
 const userInfo = async () => {
-  const response = await fetch(url + "../user/me");
+  const response = await fetch(url + "/user/me");
   const user = await response.json();
   console.log(user);
   info.innerText = user.User;
 };
 
 const logout = async () => {
-  const response = await fetch(url + "../user/logout");
+  const response = await fetch(url + "/user/logout");
   const user = await response.text();
   location.reload();
   alert("You have successfully logged out!");
