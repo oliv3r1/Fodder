@@ -17,19 +17,19 @@ const sessionChecker = (req, res, next) => {
     next();
   } else {
     console.log(`No User Session Found`);
-    res.redirect("../login");
+    res.redirect("/login");
     res.status(401).json({ message: "Unauthorized" });
   }
 };
 
-router.get("../me", [sessionChecker], user_info);
+router.get("/me", [sessionChecker], user_info);
 
-router.post("../login", user_login);
-router.get("../logout", [sessionChecker], user_logout);
+router.post("/login", user_login);
+router.get("/logout", [sessionChecker], user_logout);
 
 router.post("", [sessionChecker], user_post);
 router.get("", [sessionChecker], user_list_get);
-router.get("../:id", [sessionChecker], user_get);
+router.get("/:id", [sessionChecker], user_get);
 
 // router.put('/', (req, res) => {
 //   res.send('From this endpoint you can edit users.');
