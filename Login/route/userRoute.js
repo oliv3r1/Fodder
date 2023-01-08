@@ -17,7 +17,7 @@ const sessionChecker = (req, res, next) => {
     next();
   } else {
     console.log(`No User Session Found`);
-    res.redirect("/login");
+    res.redirect("../login");
     res.status(401).json({ message: "Unauthorized" });
   }
 };
