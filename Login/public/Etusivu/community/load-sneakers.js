@@ -1,5 +1,5 @@
 const getAllSneakers = async (id) => {
-  const response = await fetch("/sneakers");
+  const response = await fetch("../sneakers");
   const sneakers = await response.json();
   return sneakers;
 };
