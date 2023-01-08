@@ -24,7 +24,7 @@ window.onclick = function (event) {
   }
 };
 
-const url = "../"; // change url when uploading to server
+const url = "../index.html"; // change url when uploading to server
 
 const getUser = async (id) => {
   const response = await fetch(url + "/user/" + id);
