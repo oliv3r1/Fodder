@@ -28,12 +28,12 @@ const user_login = async (req, res) => {
   if (loginSuccess) {
     req.session.User = User;
   }
-  res.redirect("../");
+  res.redirect("/");
 };
 
 const user_logout = async (req, res) => {
   req.session.destroy();
-  res.redirect("../");
+  res.redirect("/");
 };
 
 const user_info = async (req, res) => {
