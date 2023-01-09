@@ -5,7 +5,7 @@ const promisePool = pool.promise();
 // ("SELECT * FROM shoes INNER JOIN malli ON shoes.malli = malli.malli_id INNER JOIN user ON shoes.user = user.ID;");
 const getAllSneakers = async () => {
   const [sneakers] = await promisePool.execute(
-    "SELECT * FROM user INNER JOIN shoes ON shoes.user = user.ID INNER JOIN malli ON shoes.malli = malli.malli_id ORDER BY ASC shoes.id; "
+    "SELECT * FROM user INNER JOIN shoes ON shoes.user = user.ID INNER JOIN malli ON shoes.malli = malli.malli_id ORDER BY shoes.id; "
   );
   let mapped = sneakers.map((e) => ({
     hinta: e.hinta,
